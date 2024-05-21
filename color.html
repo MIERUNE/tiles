@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MapLibre GL JS</title>
+        <script src="https://unpkg.com/maplibre-gl@^4.0/dist/maplibre-gl.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/maplibre-gl@^4.0/dist/maplibre-gl.css"
+        />
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map" style="height: 100vh"></div>
+        <script>
+            const map = new maplibregl.Map({
+                hash: true,
+                container: 'map', // container id
+                style: {
+                    version: 8,
+                    sources: {
+                        raster: {
+                            type: 'raster',
+                            tiles: [
+                                'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png',
+                            ],
+                            tileSize: 256,
+                        },
+                    },
+                    layers: [
+                        {
+                            id: 'raster',
+                            type: 'raster',
+                            source: 'raster',
+                        },
+                    ],
+                },
+                center: [140, 40],
+                zoom: 4,
+            });
+        </script>
+    </body>
+</html>
