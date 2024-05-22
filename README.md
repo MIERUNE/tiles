@@ -34,6 +34,7 @@ const map = new maplibregl.Map({
                 ],
                 attribution: '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
             },
+            maxzoom: 18
         },
         layers: [
             {
