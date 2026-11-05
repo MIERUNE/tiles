@@ -18,10 +18,10 @@
 
 | タイル名 | URL | ライセンス |
 | --- | --- | --- |
-| [MIERUNE](https://mierune.github.io/tiles/color.html) | <https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
-| [MIERUNE MONO](https://mierune.github.io/tiles/mono.html) | <https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
+| [MIERUNE](https://mierune.github.io/tiles/color.html) | <https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
+| [MIERUNE MONO](https://mierune.github.io/tiles/mono.html) | <https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}@2x.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
 
-- `{z}/{x}/{y}@2x.png`というURLにすると、512px解像度のタイルも利用できます
+- 上記は512px解像度のタイルです。`{z}/{x}/{y}.png`というURLにすると、256px解像度のタイルも利用できます
 
 ## サンプル
 
@@ -38,9 +38,9 @@ const map = new maplibregl.Map({
                 tiles: [
                     'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png',
                 ],
+                maxzoom: 18,
                 attribution: '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
             },
-            maxzoom: 18
         },
         layers: [
             {
