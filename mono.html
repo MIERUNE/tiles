@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>MIERUNE MONO</title>
-        <script src="https://unpkg.com/maplibre-gl@^4.0/dist/maplibre-gl.js"></script>
         <link
             rel="stylesheet"
-            href="https://unpkg.com/maplibre-gl@^4.0/dist/maplibre-gl.css"
+            href="https://unpkg.com/maplibre-gl@^6.0/dist/maplibre-gl.css"
         />
         <style>
             body {
@@ -23,7 +22,9 @@
     </head>
     <body>
         <div id="map" style="height: 100vh"></div>
-        <script>
+        <script type="module">
+            import * as maplibregl from 'https://unpkg.com/maplibre-gl@^6.0/dist/maplibre-gl.mjs';
+
             const map = new maplibregl.Map({
                 hash: true,
                 container: 'map', // container id
