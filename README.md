@@ -1,6 +1,6 @@
 # MIEURNEの地図タイル
 
-![](https://tile.mierune.co.jp/mierune/0/0/0.png)![](https://tile.mierune.co.jp/mierune_mono/0/0/0.png)  
+![](https://tile.mierune.co.jp/mierune/0/0/0.webp)![](https://tile.mierune.co.jp/mierune_mono/0/0/0.webp)  
 *<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>*
 
 [MIERUNE Inc.](https://mierune.co.jp)が公開している地図タイルの情報をまとめるリポジトリです。
@@ -18,10 +18,10 @@
 
 | タイル名 | URL | ライセンス |
 | --- | --- | --- |
-| [MIERUNE](https://mierune.github.io/tiles/color.html) | <https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
-| [MIERUNE MONO](https://mierune.github.io/tiles/mono.html) | <https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}@2x.png> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
+| [MIERUNE](https://mierune.github.io/tiles/color.html) | <https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
+| [MIERUNE MONO](https://mierune.github.io/tiles/mono.html) | <https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}@2x.webp> | <a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a> |
 
-- 上記は512px解像度のタイルです。`{z}/{x}/{y}.png`というURLにすると、256px解像度のタイルも利用できます
+- 上記は512px解像度のタイルです。`{z}/{x}/{y}.webp`というURLにすると、256px解像度のタイルも利用できます
 
 ## サンプル
 
@@ -36,7 +36,7 @@ const map = new maplibregl.Map({
             raster: {
                 type: 'raster',
                 tiles: [
-                    'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png',
+                    'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp',
                 ],
                 maxzoom: 18,
                 attribution: '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
@@ -58,7 +58,7 @@ example: [maplibregljs-starter](https://github.com/mug-jp/maplibregljs-starter)
 ### Leaflet
 
 ```javascript
-const mierune = L.tileLayer('https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png', {
+const mierune = L.tileLayer('https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp', {
     attribution: '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
 });
 
@@ -80,7 +80,7 @@ const map = new Map({
     layers: [
         new TileLayer({
             source: new XYZ({
-                url: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png',
+                url: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp',
                 attributions:
                     '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
                 attributionsCollapsible: false,
@@ -113,7 +113,7 @@ new Deck({
   controller: true,
   layers: [
         new TileLayer({
-          data: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png',
+          data: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp',
           minZoom: 0,
           maxZoom: 18,
           renderSubLayers: props => {
@@ -137,7 +137,7 @@ example: [deckgl-starter](https://github.com/dayjournal/deckgl-starter)
 
 ```javascript
 const mierune: any = new Cesium.UrlTemplateImageryProvider({
-    url: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.png',
+    url: 'https://tile.mierune.co.jp/mierune/{z}/{x}/{y}@2x.webp',
     credit: new Cesium.Credit(
         '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     ),
@@ -177,7 +177,7 @@ const view = new itowns.GlobeView(map, placement);
 
 const mierune = new itowns.TMSSource({
     projection: 'EPSG:3857',
-    url: 'https://tile.mierune.co.jp/mierune/${z}/${x}/${y}@2x.png',
+    url: 'https://tile.mierune.co.jp/mierune/${z}/${x}/${y}@2x.webp',
     attribution: {
         name: '<a href="https://mierune.co.jp">MIERUNE Inc.</a> <a href="https://www.openmaptiles.org/" target="_blank">&copy; OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
     },
